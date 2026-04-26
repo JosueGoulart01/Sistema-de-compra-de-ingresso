@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body style="margin:0; padding:0; background-color:#f4f4f4; font-family:Arial, sans-serif;">
+
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f4f4; padding:20px;">
+    <tr>
+        <td align="center">
+
+            <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:10px; overflow:hidden;">
+
+                <!-- HEADER -->
+                <tr>
+                    <td style="background:#4CAF50; color:white; padding:20px; text-align:center;">
+                        <h2 style="margin:0;">🎟️ Confirmação de Compra</h2>
+                    </td>
+                </tr>
+
+                <!-- CONTENT -->
+                <tr>
+                    <td style="padding:30px; color:#333333;">
+
+                        <p style="font-size:16px;">
+                            Olá <strong th:text="${nome}">Cliente</strong>,
+                        </p>
+
+                        <p style="font-size:15px;">
+                            Seu ingresso foi comprado com sucesso! 🎉
+                        </p>
+
+                        <!-- BOX INFO -->
+                        <table width="100%" cellpadding="10" cellspacing="0" style="background:#f9f9f9; border-radius:8px; margin-top:20px;">
+                            <tr>
+                                <td><strong>🎤 Evento:</strong></td>
+                                <td th:text="${evento}">Evento</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🎟️ Quantidade:</strong></td>
+                                <td th:text="${quantidade}">1</td>
+                            </tr>
+                        </table>
+
+                        <!-- BUTTON -->
+                        <div style="text-align:center; margin-top:30px;">
+                            <a href="#"
+                               style="background:#4CAF50;
+                                      color:white;
+                                      padding:12px 20px;
+                                      text-decoration:none;
+                                      border-radius:6px;
+                                      font-size:14px;
+                                      display:inline-block;">
+                                Ver Detalhes do Ingresso
+                            </a>
+                        </div>
+
+                        <p style="margin-top:30px; font-size:14px;">
+                            Aproveite o evento! 🎶
+                        </p>
+
+                    </td>
+                </tr>
+
+                <!-- FOOTER -->
+                <tr>
+                    <td style="background:#eeeeee; padding:15px; text-align:center; font-size:12px; color:#666;">
+                        <p style="margin:0;">Este é um email automático, não responda.</p>
+                        <p style="margin:5px 0 0;">© 2026 Ingressos App</p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

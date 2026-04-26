@@ -1,0 +1,26 @@
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  produtor-ingresso:
+    build: ../produtor-ingresso
+    container_name: produtor-ingresso
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rabbitmq
+    environment:
+      SPRING_RABBITMQ_HOST: rabbitmq
+
+  consumidor-notificacao:
+    build: ../consumidor-notificacao
+    container_name: consumidor-notificacao
+    depends_on:
+      - rabbitmq
+    environment:
+      SPRING_RABBITMQ_HOST: rabbitmq
